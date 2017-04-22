@@ -12,4 +12,4 @@ This database was initially built by:
 * Liam Stanton (LLNL)
 * Michael S. Murillo (MSU)
 
-Jump to [here](database/) to see the data.
+Jump to [here](database/) to access the data!
