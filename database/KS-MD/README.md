@@ -4,4 +4,5 @@ If you wish to jump to another directory:
 * [PIMC](../PIMC/)
 * [HNC](../HNC)
 * [KS-MD](../KS-MD/)
-* [OFDFT-MD](../OFDFT-MD)
+* [OFDFT-MD](../OFDFT-MD/)
+* [Pair Potentials](../Pair-Potentials/)
