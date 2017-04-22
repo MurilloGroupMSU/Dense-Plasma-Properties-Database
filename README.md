@@ -4,6 +4,10 @@ This repo contains various forms of data that characterize the physical properti
 
 Each file includes a header that describes its content and source.
 
-We are also developing a Jupyter notebook for easy viewing of the database. An example Jupyter notebook is included here, but it is only here as a test; please don't try to use it!
+We are also developing a Jupyter notebook for easy viewing of the database. An example Jupyter notebook is included here, but it is only here as a test; please don't try to use it directly, but use it as motivation for building your own tool.
 
-Mathieu is trying to modify!
+
+This database was initially built by:
+* Matheiu Marciante
+* Liam Stanton
+* Michael S. Murillo
