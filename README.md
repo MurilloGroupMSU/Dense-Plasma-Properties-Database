@@ -11,3 +11,5 @@ This database was initially built by:
 * Matheiu Marciante
 * Liam Stanton
 * Michael S. Murillo
+
+Jump to [here](database/) to see the data.
