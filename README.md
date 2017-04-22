@@ -8,8 +8,8 @@ We are also developing a Jupyter notebook for easy viewing of the database. An e
 
 
 This database was initially built by:
-* Matheiu Marciante
-* Liam Stanton
-* Michael S. Murillo
+* Mathieu Marciante (LANL)
+* Liam Stanton (LLNL)
+* Michael S. Murillo (MSU)
 
 Jump to [here](database/) to see the data.
