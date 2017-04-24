@@ -1,6 +1,6 @@
 This folder contains results based on quantum statistical potentials (QSPs) employed in electron-ion MD.
 
-Learn more [here](https://en.wikipedia.org/wiki/Molecular_dynamics#Pair_potentials_versus_many-body_potentials).
+Learn more [here](https://www.researchgate.net/publication/223848435_Analysis_of_semi-classical_potentials_for_molecular_dynamics_and_Monte_Carlo_simulations_of_warm_dense_matter).
 
 If you wish to jump to another directory:
 * [QSP](../QSP-MD/)
