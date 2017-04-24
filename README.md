@@ -15,3 +15,5 @@ This database was initially built by:
 Jump to [here](database/) to access the data!
 
 This database grew out of a project aimed to understand the relative accuracy of a wide variety of high-fidelity physics models and the simplest reasonable pair potential model for large variations of temperature, density and nuclear charge. The results of this metastudy was first presented by Marciante at the transport coefficient workshop held at SNL; that talk is included here for reference. The metastudy itself was initiated as a data-driven approach toward understanding the needs of the computational dense plasma community for program development purposes.
+
+The data in the *current* database was obtained through meticulous digitization of plots found in the literature. In the future we will add data here directly from the authors. 
