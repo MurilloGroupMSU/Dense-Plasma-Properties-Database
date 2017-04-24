@@ -13,3 +13,5 @@ This database was initially built by:
 * Michael S. Murillo (MSU)
 
 Jump to [here](database/) to access the data!
+
+This database grew out of a project aimed to understand the relative accuracy of a wide variety of high-fidelity physics models and the simplest reasonable pair potential model for large variations of temperature, density and nuclear charge. The results of this metastudy was first presented by Marciante at the transport coefficient workshop held at SNL; that talk is included here for reference.
