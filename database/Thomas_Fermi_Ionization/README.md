@@ -11,5 +11,7 @@ Currently there are two versions of the code:
 2. Single species Julia (as a Jupyter notebook).
 
 If would like more information, or some really great papers to cite, consider reading/citing these:
+
 [1] [Partial ionization in dense plasmas: Comparisons among average-atom density functional models](https://www.researchgate.net/publication/242376805_Partial_ionization_in_dense_plasmas_Comparisons_among_average-atom_density_functional_models), M. S. Murillo, Jon Weisheit, Stephanie B. Hansen, and M. W. C. Dharma-wardana, Phys. Rev. E 87, 063113 (2013).
+
 [2] [Ionic transport in high-energy-density matter](https://www.researchgate.net/publication/300115955_Ionic_transport_in_high-energy-density_matter), Liam G. Stanton and Michael S. Murillo, Phys. Rev. E 93, (2016).
