@@ -6,9 +6,11 @@ Atomic physics plays a crucial role in determining the properties of plasmas. A 
 
 Here, an average-atom mean ionization state is computed using the [Thomas-Fermi electronic structure](https://en.wikipedia.org/wiki/Thomas%E2%80%93Fermi_model) model. The code is nearly trivial, owing to a fit given by Richard More.
 
-Currently there are two versions of the code:
+Currently there are four versions of the code:
 1. Single species Python (as a Jupyter notebook).
 2. Single species Julia (as a Jupyter notebook).
+3. Multi-species python (as a python module)
+4. Multi-species C
 
 If would like more information, or some really great papers to cite, consider reading/citing these:
 
