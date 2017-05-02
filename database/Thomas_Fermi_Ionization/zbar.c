@@ -1,3 +1,5 @@
+#Code written by Jim Glosli, lightly edited by Jeff Haack
+
 #include "zBar.h"
 #include <stdio.h>
 #include <stdlib.h>
