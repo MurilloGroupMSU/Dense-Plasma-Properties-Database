@@ -135,6 +135,7 @@ def zBarFunc(Ions):
                 delta = 0.5*(1.0/Ion.n - Ion.vol)
             if (Ion.vol + delta < 0):
                 delta = -0.5*Ion.vol
+            Ion.vol = Ion.vol + delta
             f = f + Ion.n*Ion.vol
             df = df + Ion.n / Ion.dnf
             error = (Ion.nf / nf - 1.0)**2
@@ -150,4 +151,4 @@ def zBarFunc(Ions):
         if(error < 1.0e-12):
             break
 
-
+    print loop, error
