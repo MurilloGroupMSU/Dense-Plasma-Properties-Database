@@ -22,3 +22,6 @@ The data size is (166x763) and covers  0.18< q < 30, and 0 < w < 3.
 The 0th row is the frequency
 The 0th column is the wavenumber
 
+For citation:
+Yongjun Choi, Gautham Dharuman, and Michael S. Murillo, High-Frequency Response of Classical Strongly Coupled Plasmas,
+Physical Review E, currently under review.
