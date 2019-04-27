@@ -5,13 +5,10 @@
 
 We have computed the dynamic structure factor (DSF) $S(k,\omega)$ for the Yukawa model for a wide range of $\kappa$ and $\Gamma$: 
 
-kappa = 0; Gamma = [10, 50, 150]
-
-kappa = 1; Gamma = [14, 72, 217]
-
-kappa = 2; Gamma = [31, 158, 476]
-
-kappa = 3; Gamma = [100, 503, 1510]
+* kappa = 0; Gamma = [10, 50, 150]
+* kappa = 1; Gamma = [14, 72, 217]
+* kappa = 2; Gamma = [31, 158, 476]
+* kappa = 3; Gamma = [100, 503, 1510]
 
 These values were chosen to roughly follow contours of constant effective coupling. 
 
