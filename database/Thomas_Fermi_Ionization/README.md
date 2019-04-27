@@ -1,17 +1,24 @@
 
+# Thomas-Fermi Average-Atom Ionization Model
+
+### Background
+
 Atomic physics plays a crucial role in determining the properties of plasmas. A useful approximation is to assume that the electrons can be categorized as very strongly or very weakly interacting with the nuclei, which are often referred to as bound/free or core/valence, respectively. Knowing which electrons are in these cateogries is determined by temperature and pressure ionization, the determination of which is itelf a non-trivial calculation. There are three broad categories for performing such calculations:
 1. Equilibrium, dilute plasmas: [Saha equation](https://en.wikipedia.org/wiki/Saha_ionization_equation) is used.
 2. Non-equilibrium, dilute plasma: Rate equations, or their steady state solutions, are used; this is sometimes referred to as "atomic kinetics".
 3. Dense, equilibrium plasmas: Pressure ionization is important, and average atom models are typically used. 
 
+### The Model
 Here, an average-atom mean ionization state is computed using the [Thomas-Fermi electronic structure](https://en.wikipedia.org/wiki/Thomas%E2%80%93Fermi_model) model. The code is nearly trivial, owing to a fit given by Richard More.
 
-Currently there are four versions of the code:
+Currently there are five versions of the code:
 1. Single species Python (as a Jupyter notebook),
 2. Single species Julia (as a Jupyter notebook),
 3. Multispecies Python (as a python module),
 4. Multispecies Python (as a Jupyter notebook),
-4. Multispecies C.
+5. Multispecies C.
+
+### Citations
 
 If would like more information, or some really great papers to cite, consider reading/citing these:
 
