@@ -31,9 +31,9 @@ Yukawa reduced unit is used (time is normalized by the ion plasma frequency, len
 radius)
 
 Simulation parameters:
-$dt = 0.01$
-Number of timesteps = 80000
-Number of particles = 10000
+* $dt = 0.01$
+* Number of timesteps = 80000
+* Number of particles = 10000
 
 
 ### Citation
