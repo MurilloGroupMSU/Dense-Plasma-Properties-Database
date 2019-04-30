@@ -1,4 +1,4 @@
-# Michigan State Dense Plasma Properties Database
+# Michigan State University Plasma Properties Database
 
 This repo contains various forms of data that characterize the physical properties of dense plasmas. The data sources are from computational results. 
 
