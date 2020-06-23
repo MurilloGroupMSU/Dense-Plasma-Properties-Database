@@ -54,7 +54,7 @@ Inconel 625,, 12.9 x 10^-7
 Monel 400 ,, 5.47 x 10^-7
 Invar,, 8.2 x 10^-7
 Haynes alloy 25,, 8.9x 10^-7
-Kovar,,
+Kovar,, 4.9 x 10^-7
 Mercury,1.04 x 10^6,
 ,,
 Al2O3,10^-10,
@@ -130,4 +130,4 @@ Wood,,10^14 - 10^16
 ,,
 "Cortical bone, dry",10^-9,
 "Cortical bone, wet (10% moisture)",10^-3,3 - 4 x 10^3
-"Tissues, soft",,5 -> 15
+"Tissues, soft",,5 - 15
