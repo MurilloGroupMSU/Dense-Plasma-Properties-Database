@@ -1,61 +1,61 @@
 Material,Conductivity mho/m ,Resistivity ohm-m
-Silver,6.3 x 107,
-Copper,5.85 x 107 ,
-Gold, 4.25 x 107 ,
-Alumninum,3.45 x 107,
-AI-1.2% Mn alloy,2.95 x 107,
-Sodium,2.1 x 107,
-Zinc,,62.0 x 10-7
-"Zirconium, grade 702",,3.97 x 10-7
-Solder (60Sn-40Pb),,1.50 x 10-7
-Tin,,1.11 x 10-7
-Lead,,2.06 x 10-7
-"Stainless steal, 301",0.14 x 107,
-"Nichrome (80% Ni, 20% Cr)",0.093 x 107,
+Silver,6.3 x 10^7,
+Copper,5.85 x 10^7 ,
+Gold, 4.25 x 10^7 ,
+Alumninum,3.45 x 10^7,
+AI-1.2% Mn alloy,2.95 x 10^7,
+Sodium,2.1 x 10^7,
+Zinc,,62.0 x 10^-7
+"Zirconium, grade 702",,3.97 x 10^-7
+Solder (60Sn-40Pb),,1.50 x 10^-7
+Tin,,1.11 x 10^-7
+Lead,,2.06 x 10^-7
+"Stainless steal, 301",0.14 x 10^7,
+"Nichrome (80% Ni, 20% Cr)",0.093 x 10^7,
 "Carbon, graphite",10^5,
 Germanium,2.2,
-Silicon (intrinsic),4.3 x 10-4,
-"Carbon, diamond (natural)",< 10 -14,
-Molybdenum,,5.2 x 10-8
-Tantalum,,13.5 x 10-8
-Tungsten,, 5.3 x 10-8
-Platinum,,10.60 x 10-8
-Titanium,,4.2 x 10-7
-Titanium alloy Ti-6Al-4 V,, 17.1 x 10-7
-Titanium alloy Ti-5Al-2.5Sn,, 15.7 x 10-7
-"Carbon, diamond (synthetic)",,1.5 x 10-2
-"Steel alloy, A36, 1040, 1020",,1.6 x 10-7
-"Steel alloy, 4140",, 2.2 x 10-7
-Steel alloy 4340,,2.48  x 10-7
-"Stainless steel, 304",, 7.2 x 10-7
-"Stainless steel, 316",, 7.4 x 10-7
-"Stainless steel, 405, 440A",,6.0  x 10-7
-"Stainless steel, 17-7PH",, 8.3 x 10-7
-"Iron, gray, G1800",, 15 x 10-7
-"Iron, gray, G3000",, 9.5 x 10-7
-"Iron, gray, G4000",, 8.5 x 10-7
-"Iron, 60-40-18",, 5.5 x 10-7
-"Iron, 80-55-06, 120-90-02",, 6.2 x 10-7
-Aluminum alloy 1100,, 2.9 x 10-8
-"Aluminum alloy, 2024",, 3.4 x 10-8
-"Aluminum alloy, 6061",, 3.7 x 10-8
-"Aluminum alloy, 7075",, 5.22 x 10-8
-"Aluminum alloy, 356.0",, 4.42 x 10-8
-"Copper alloy, C11000",, 1.72 x 10-8
-"Copper alloy, C172000 (beryllium-copper)",, 5.7 x 10-8
-"Copper alloy, C26000",, 6.2 x 10-8
-"Copper alloy, C36000",, 6.6 x 10-8
-"Copper alloy, C71500 (copper-30% nickel)",, 37.5 x 10-8
-"Copper alloy, C93200",, 14.4 x 10-8
-"Magnesium alloy, AZ31B",, 9.2 x 10-8
-"Magnesium alloy, AZ91D",, 17 x 10-7
-Nickel 200,, 0.95 x 10-7
-Inconel 625,, 12.9 x 10-7
-Monel 400 ,, 5.47 x 10-7
-Invar,, 8.2 x 10-7
-Haynes alloy 25,, 8.9x 10-7
+Silicon (intrinsic),4.3 x 10^-4,
+"Carbon, diamond (natural)",< 10^-14,
+Molybdenum,,5.2 x 10^-8
+Tantalum,,13.5 x 10^-8
+Tungsten,, 5.3 x 10^-8
+Platinum,,10.60 x 10^-8
+Titanium,,4.2 x 10^-7
+Titanium alloy Ti-6Al-4 V,, 17.1 x 10^-7
+Titanium alloy Ti-5Al-2.5Sn,, 15.7 x 10^-7
+"Carbon, diamond (synthetic)",,1.5 x 10^-2
+"Steel alloy, A36, 1040, 1020",,1.6 x 10^-7
+"Steel alloy, 4140",, 2.2 x 10^-7
+Steel alloy 4340,,2.48  x 10^-7
+"Stainless steel, 304",, 7.2 x 10^-7
+"Stainless steel, 316",, 7.4 x 10^-7
+"Stainless steel, 405, 440A",,6.0  x 10^-7
+"Stainless steel, 17-7PH",, 8.3 x 10^-7
+"Iron, gray, G1800",, 15 x 10^-7
+"Iron, gray, G3000",, 9.5 x 10^-7
+"Iron, gray, G4000",, 8.5 x 10^-7
+"Iron, 60-40-18",, 5.5 x 10^-7
+"Iron, 80-55-06, 120-90-02",, 6.2 x 10^-7
+Aluminum alloy 1100,, 2.9 x 10^-8
+"Aluminum alloy, 2024",, 3.4 x 10^-8
+"Aluminum alloy, 6061",, 3.7 x 10^-8
+"Aluminum alloy, 7075",, 5.22 x 10^-8
+"Aluminum alloy, 356.0",, 4.42 x 10^-8
+"Copper alloy, C11000",, 1.72 x 10^-8
+"Copper alloy, C172000 (beryllium-copper)",, 5.7 x 10^-8
+"Copper alloy, C26000",, 6.2 x 10^-8
+"Copper alloy, C36000",, 6.6 x 10^-8
+"Copper alloy, C71500 (copper-30% nickel)",, 37.5 x 10^-8
+"Copper alloy, C93200",, 14.4 x 10^-8
+"Magnesium alloy, AZ31B",, 9.2 x 10^-8
+"Magnesium alloy, AZ91D",, 17 x 10^-7
+Nickel 200,, 0.95 x 10^-7
+Inconel 625,, 12.9 x 10^-7
+Monel 400 ,, 5.47 x 10^-7
+Invar,, 8.2 x 10^-7
+Haynes alloy 25,, 8.9x 10^-7
 Kovar,,
-Mercury,1.04 x 106,
+Mercury,1.04 x 10^6,
 ,,
 Al2O3,10^-10,
 Al6Si2O13 (mullite) ,,> 10^12
