@@ -1,6 +1,6 @@
 
 ____
-# DeSilva Data
+## DeSilva Data
 ____
 This database contains data from exploding wire experiments conducted by DeSilva. Specifially, the database contains elements:
 * Cu
@@ -8,11 +8,11 @@ This database contains data from exploding wire experiments conducted by DeSilva
 * Fe
 * Al
 
-# Modified Lee-More Model (MLM)
+### Modified Lee-More Model (MLM)
 
 In the original paper [Murillo, Frontiers in Physics, 2022], a modification of the Lee-More conductivity model was used with this dataset. The MLM has been written as an easy to use library and is included here with the data.
 
-# Files Included 
+### Files Included 
 
 I have organized the files in different ways and have provided a Jupyter notebook that allows one to explore the data and perhaps allow the user to create customized files. These files are:
 * `MLM.py` -- modified Lee-More Model
@@ -21,7 +21,7 @@ I have organized the files in different ways and have provided a Jupyter noteboo
 * `DeSilva_combined.csv` -- data for all elements
 * `Cu.csv`, `W.csv`, `Fe.csv`, `Al.csv` -- individual files for each element
 
-# Exploratory Data Analysis
+### Exploratory Data Analysis
 
 Here is what the data looks like:
 
