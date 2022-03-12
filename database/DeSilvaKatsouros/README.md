@@ -35,7 +35,7 @@ I have organized the files in different ways and have provided a Jupyter noteboo
 
 Here is what the data looks like:
 
-![](image.png)
+![](combined_plot.png)
 
 
 ____
