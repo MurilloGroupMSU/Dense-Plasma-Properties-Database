@@ -28,7 +28,7 @@ I have organized the files in different ways and have provided a Jupyter noteboo
 * `DeSilvaKatsouros.pdf` -- original DeSilva paper
 * `View_DeSilva_data.ipynb` -- Jupyter notebook for exploring the data
 * `DeSilva_combined.csv` -- data for all elements
-* `Cu.csv`, `W.csv`, `Fe.csv`, `Al.csv` -- individual files for each element
+* `Cu_cond.csv`, `W_cond.csv`, `Fe_cond.csv`, `Al_cond.csv` -- individual files for each element
 
 
 ### Exploratory Data Analysis
