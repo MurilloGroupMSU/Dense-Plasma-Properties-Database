@@ -20,12 +20,6 @@ This data was originally collectied here as part of the paper,
 which also included a modfied version of the Lee-More conductivity model, which can be found [here](https://murillogroupmsu.github.io/Modified-Lee-More-Transport/).
 
 
-In the original paper [Murillo, Frontiers in Physics, 2022] that led to the creation of this database, a modification of the Lee-More conductivity model was used. The MLM has been written as an easy to use Python library and is included here with the data. To use this library:
-1. install the library in the apprpriate path on your computer
-2. `import mlm`
-3. `conds = mlm(Z, $\rho$, T)`
-
-
 ### Files Included 
 
 I have organized the files in different ways and have provided a Jupyter notebook that allows one to explore the data and perhaps allow the user to create customized files. These files are:
