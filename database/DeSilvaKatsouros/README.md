@@ -15,6 +15,11 @@ The data is in the form of {Z_{nuc}, $\rho$, T, $\sigma$} with units {none, g/cc
 
 ### Modified Lee-More Model (MLM)
 
+This data was originally collectied here as part of the paper,
+* _Data-driven Electrical Conductivities of Dense Plasmas_, Michael S. Murillo, Frontiers in Physics, 2022,
+which also included a modfied version of the Lee-More conductivity model, which can be found [here](https://murillogroupmsu.github.io/Modified-Lee-More-Transport/).
+
+
 In the original paper [Murillo, Frontiers in Physics, 2022] that led to the creation of this database, a modification of the Lee-More conductivity model was used. The MLM has been written as an easy to use Python library and is included here with the data. To use this library:
 1. install the library in the apprpriate path on your computer
 2. `import mlm`
