@@ -10,7 +10,7 @@ This database contains electrical conductivity data from exploding wire experime
 * Cu,
 * W.
 
-The data is in the form of {Z_{nuc}, $\rho$, T, $\sigma$} with units {none, g/cc, K, S/m}. The numerical values in the CSV files are transformed such that the base-10 logarithm of the temperature and conducvity are given. 
+The data is in the form of {Z_{nuc}, $\rho$, T, $\sigma$} with units {none, g/cc, K, S/m}. The numerical values in the CSV files are transformed such that the base-10 logarithm of the temperature and conductivity are given. 
 
 
 ### Files Included 
