@@ -37,7 +37,9 @@ This data was originally collected here as part of the paper,
 which also included the MLM, a modfied version of the Lee-More conductivity model, more of which can be found [here](https://murillogroupmsu.github.io/Modified-Lee-More-Transport/).
 
 ____
-Thanks to Prof. Stephens at Texas Tech and Dr. Hansen at Sandia for the data. If you have data beyond what is here, please send it to me! 
+Thanks to Prof. Stephens at Texas Tech and Dr. Hansen at Sandia for the data. If you have electrical conductivity data beyond what is here, please send it to me!
+
+Special thanks to Prof. DeSilva for many useful discussions regarding his data. 
 
 
 
