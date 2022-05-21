@@ -3,14 +3,14 @@ ____
 ## DeSilva Data
 ____
 
-This database contains electrical conductivity data from exploding wire experiments conducted by DeSilva. The original publication is given as a PDF in this repo. Specifially, the database contains elements:
+This database contains electrical conductivity data from exploding wire experiments conducted by DeSilva and co-workers. The original publications are given as a PDF in this repo. Specifially, the database contains elements:
 * Al,
 * Fe,
 * Ni,
 * Cu,
 * W.
 
-The data is in the form of {Z_{nuc}, $\rho$, T, $\sigma$} with units {none, g/cc, K, S/m}. The numerical values in the CSV files are transformed such that the base-10 logarithm of the temperature and conductivity are given. 
+The data is in the form of {Z_{nuc}, $\rho$, T, $\sigma$} with units {none, g/cc, K, S/m}. The numerical values in the CSV files are transformed such that the base-10 logarithm of the temperature and conductivity are given. (DeSilva and Vunni include other elements, which are not given here because they are in terms of internal energy rather than temperature.)
 
 
 ### Files Included 
