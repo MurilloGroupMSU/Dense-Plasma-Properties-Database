@@ -1,154 +1,148 @@
+"""Class to find mean ionizations in plasmas, as found in [1].
+
+[1]Stanton, L. G., & Murillo, M. S. (2016). 
+Ionic transport in high-energy-density matter. 
+Physical Review E, 93(4), 043203. 
+https://doi.org/10.1103/PhysRevE.93.043203"""
+
 import numpy as np
-import math
 
-#calculates Zbar of a mixture, based on glosli ddcmd calculation
 
-Na = 6.0221415e23   #Avogadro/Avocado number
+class ZbarSolver(object):
+    """A simple class that iteratively solves for mean ionization states with
+    the ability to be reset.
+    
+    This class solves for the Thomas-Fermi average atom ionization of a
+    plasma system, and has the ability to be reset with new inputs inorder
+    to avoid re-initialization when a large number of solves need to be done.
+    
+    Parameters
+    ----------
+    ndens : (N,) nd.array
+        The number densities (in units of 1/cm^{3}) of each species.
+    znuc : (N,) nd.array
+        Atomic number of each species.
+    Te : float
+        Electron temperature in the system, in units of eV.
 
-def zBar(n, Z, T):
+
+    Class Attributes
+    ----------------
+    a : (2,) nd.array
+       Fit constants.
+    k : (9,) nd.array
+       Other fit constants.
+    
+
+    Attributes
+    ----------
+    zbars : (N,) nd.array
+       Ionization of each species, in the same order as the inputs.
+    A : (N,) nd.array
+       Invariant of the mean ionization function with respect to inputs.
+    B : (N, nd.array)
+       Invariant of the mean ionization function with respect to inputs.
+    C : (N, nd.array)
+       Invariant of the mean ionization function with respect to inputs.
+    s1 : (N, nd.array)
+       Storage array. Once the solution has converged, holds volume 
+       (in units of cm^{3}/mol) of each species. 
+    s2 : (N, nd.array)
+       Storage array. Once the solution has converged, it holds the
+       mean ionization from the previous step.
     """
-    This function calculates the partial ionizations of a mixture of species. 
-
-    Inputs:
-    n - list of number densities of the species. Units: 1/cc
-    Z - list of charg states when each species is fully ionized (e.g. he has Z=2)
-    T - electron temperature. Units: eV
-
-    Output:
-    zBar - list of partial ionizations for each species
-    
-    """
-    nspec = len(n)
-
-    Ions = []
-    for spec in range(nspec):
-        Ions.append(Ion_state(n[spec]/Na,Z[spec],T) )
-    
-    zBarFunc(Ions)
-
-    zbar = []
-    for Ion in Ions:
-        zbar.append(Ion.zbar)
-
-    return zbar
-
-                  
+    a = np.array([14.3139, 0.6624], dtype=np.double)
+    k = np.array([3.323e-3, 0.9718, 9.26148e-5, 3.10165, -1.7630, 
+                  1.43175, 0.31546, -0.366667, 0.983333], dtype=np.double)
 
 
-
-class Ion_state(object):
-    def __init__(self,n,Z,T):
-        self.n = n
-        self.T = T
-        self.Z = Z
-        self.vol = 0.0
-        self.nf = 0.0
-        self.dnf = 0.0
-        self.zbar = 0.0
-    
-        a1 = 0.003323;
-        a2 = 0.9718;
-        a3 = 9.26148e-5;
-        a4 = 3.10165;
-        b0 = -1.7630;
-        b1 = 1.43175;
-        b2 = 0.31546;
-        c1 = -0.366667;
-        c2 = 0.983333;
-
-        self.T = self.T + 1e-100; 
-        T0 = T/pow(Z,(4./3.)); 
-        Tf = T0/(1.+T0);
-        self.A = a1*pow(T0,a2)+a3*pow(T0,a4);
-        self.B = -math.exp(b0+b1*Tf+b2*pow(Tf,7.));
-        self.C = c1*Tf+c2;
-
-
-
-def fttfq(I):
-    A = I.A
-    B = I.B
-    C = I.C
-    Z = I.Z
-
-    vol = I.vol
-
-    alpha = 14.3139
-    beta = 0.6624
-    R = (Z*vol)
-    Q1 = A*R**-B
-    Y1 = R**-C 
-    Y2 = Q1**C
-    Y = Y1 + Y2; 
-    Q = Y**(1.0/C)
-    x = alpha*Q**beta
-    zbar = Z*x/(1.+x+math.sqrt(1.+2.*x));
-    
-    dR = Z; 
-    dQ1 = -B*Q1/R*dR; 
-    dY = C*(-Y1/R*dR + Y2/Q1*dQ1); 
-    dQ = Q/(C*Y)*dY; 
-    dx = x * beta/Q*dQ; 
-
-    t1 = math.sqrt(1.+2.*x);
-    dt1 = 1/t1 * dx; 
-    t2 = 1 + x + t1; 
-    dt2  = (dx + dt1); 
-    zBar =   Z*x/t2; 
-    dzBar = zBar/x*dx - zBar/t2*dt2; 
-    rho = zbar/vol; 
-    drho = (dzBar - rho)/vol; 
-    I.zbar = zBar; 
-    I.nf = rho; 
-    I.dnf = drho; 
-
-    return rho;
+    def __init__(self, ndens, znuc, Te):
+        super(ZbarSolver, self).__init__()
+        self.zbars = np.ones(znuc.shape[0], dtype=znuc.dtype)
+        self.A = np.ones(znuc.shape[0], dtype=znuc.dtype)
+        self.B = np.ones(znuc.shape[0], dtype=znuc.dtype)
+        self.C = np.ones(znuc.shape[0], dtype=znuc.dtype)
+        self.s1 = np.ones(znuc.shape[0], dtype=znuc.dtype)
+        self.s2 = np.ones(znuc.shape[0], dtype=znuc.dtype)
+        self.solve_zbar(ndens/6.0221409e23, znuc, Te)
 
     
-
-def zBarFunc(Ions):
-
-    nspec = len(Ions)
-    ntotal = 0.0
-
-    for Ion in Ions:
-        ntotal += Ion.n
-
-    vol = 1/ntotal
-    nf = 0.0
-    
-    for Ion in Ions:
-        Ion.vol = vol
-        fttfq(Ion)
-        nf = nf + Ion.nf * Ion.n
-    
-    nf = nf * vol
-    
-    for loop in range(50):
-        f = 0.0
-        df = 0.0
-        error = 0.0
-        for Ion in Ions:
-            fttfq(Ion)
-            delta = -(Ion.nf - nf)/Ion.dnf
-            if (Ion.vol + delta) > 1.0/Ion.n:
-                delta = 0.5*(1.0/Ion.n - Ion.vol)
-            if (Ion.vol + delta < 0):
-                delta = -0.5*Ion.vol
-            Ion.vol = Ion.vol + delta
-            f = f + Ion.n*Ion.vol
-            df = df + Ion.n / Ion.dnf
-            error = (Ion.nf / nf - 1.0)**2
-        delta_nf = - (f-1.0)/df
-        if(delta_nf > 0.2*nf):
-            delta_nf = 0.2*nf
-        if(delta_nf < -0.2*nf):
-            delta_nf = -0.2*nf
-        nf = nf + delta_nf
+    def reset(self, ndens, znuc, Te):
+        """Essentially re-initializes the class, but without additional memory
+        allocation or initialization overhead.
         
-        error = error + (f-1.0)*(f-1.0)
-        error = math.sqrt(error)
-        if(error < 1.0e-12):
-            break
+        Parameters
+        ----------
+        ndens : (N,) nd.array
+            The number densities (in units of 1/cm^{3}) of each species.
+        znuc : (N,) nd.array
+            Atomic number of each species.
+        Te : float
+            Electron temperature in the new system, in units of eV."""
+        self.zbars[:] = 1.0
+        self.solve_zbar(ndens/6.0221409e23, znuc, Te)
 
-    print loop, error
+
+    def set_constants(self, znuc, Te):
+        """Set variables in the zbar function that are independent of 
+        the varying ionization states.
+        
+        Parameters
+        ----------
+        znuc : (N,) nd.array
+            Atomic number of each species.
+        Te : float
+            Electron temperature in the system.
+        """
+        self.A = Te*np.power(znuc, -4.0/3.0)
+        self.B = self.A/(1.0 + self.A)
+        self.C = np.copy(self.B)
+        self.A = self.k[0]*np.power(self.A, self.k[1]) + self.k[2]*np.power(self.A, self.k[3])
+        self.B = self.k[4] + self.k[5]*self.B + self.k[6]*np.power(self.B, 7.0)
+        self.B = -1*np.exp(self.B)
+        self.C = self.k[7]*self.C + self.k[8]
+
+    
+    def set_zbar(self, znuc):
+        """Generates the mean ionization states for the current values of `self.V`.
+        
+        Parameters
+        ----------
+        znuc : (N,) nd.array
+            Atomic number of each species.
+        """
+        self.s1[:] = np.power(self.s1, -1*self.C)
+        self.s1[:] = self.s1[:] + np.power(self.A[:], self.C[:])\
+                    *np.power(self.s1[:], self.B[:])
+        self.s1[:] = self.a[0]*np.power(self.s1[:], self.a[1]/self.C[:])
+        self.zbars[:] = 1 + self.s1[:] + np.sqrt(1 + 2*self.s1[:])
+        self.zbars[:] = znuc*self.s1[:]/self.zbars[:]
+
+
+    def solve_zbar(self, ndens, znuc, Te):
+        """Generate the consistent mean-ionizations for each species
+        iteratively.
+        
+        Parameters
+        ----------
+        ndens : (N,) nd.array
+            Number density of each species, in units of mol/cm^{3}.
+        znuc : (N,) nd.array
+            Atomic number of each species.
+        Te : float
+            Electron temperature, in units of eV.
+        """
+        self.set_constants(znuc, Te)
+        self.s2[:] = self.zbars[:]
+        self.s1[:] = znuc[:]*self.s1[:]
+        self.set_zbar(znuc)
+        rhotot = np.sum(ndens*self.zbars)
+        self.s1[:] = self.zbars[:]/rhotot
+        err = np.max(np.abs(self.zbars - self.s2))
+        while err>np.finfo(self.zbars.dtype).eps:
+            self.s2[:] = self.zbars[:]
+            self.s1[:] = znuc[:]*self.s1[:]
+            self.set_zbar(znuc)
+            rhotot = np.sum(ndens*self.zbars)
+            self.s1[:] = self.zbars[:]/rhotot
+            err = np.max(np.abs(self.zbars - self.s2))
