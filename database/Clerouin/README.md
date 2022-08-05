@@ -4,7 +4,7 @@
 This data originated from the paper: 
 
 _A database for equations of state and resistivities measurements in the warm dense matter regime_\
-J. Clerouin et al.\
+J. Clérouin et al.\
 Physics of Plasmas 19, 082702 (2012)
 
 I obtained the data as this CSV file from an anonymous referee during the review process of my paper:
