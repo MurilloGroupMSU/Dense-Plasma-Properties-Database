@@ -1,5 +1,5 @@
 
-# Cl`e`rouin Resistivity Data
+# Clérouin Resistivity Data
 
 This data originated from the paper: 
 
